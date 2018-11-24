@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CarrinhoActivity">
+    tools:context=".activities.CarrinhoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:orientation="vertical"
             android:layout_marginTop="@dimen/tile_padding">
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -42,12 +42,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/tile_padding"
                     android:text="Bicicleta retrô com farol"/>
 
                 <TextView
                     android:id="@+id/tvFrete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/tile_padding"
                     android:text="Frete: grátis"/>
 
                 <LinearLayout
@@ -62,6 +64,7 @@
                         android:text="Quantidade:"/>
 
                     <Spinner
+                        android:id="@+id/sQuantidade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
@@ -75,8 +78,34 @@
 
         </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/tile_padding"
+                android:background="@android:color/darker_gray"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:layout_margin="@dimen/tile_padding"
+                android:text="Total         R$839,80" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_margin="@dimen/tile_padding">
+                <Button
+                    android:id="@+id/btnFinalizarCompra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/secondaryColor"
+                    android:textColor="@color/secondaryTextColor"
+                    android:padding="@dimen/tile_padding"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/finalizar_compra"/>
+
+            </RelativeLayout >
         </LinearLayout>
 
     </ScrollView>

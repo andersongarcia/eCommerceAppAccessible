@@ -1,20 +1,79 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppMaterialTheme" parent="MyMaterialTheme.Base">
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">true</item>
         <item name="colorPrimary">@color/primaryColor</item>
+
+
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
+
+        <!-- use to make contextual action mode overlap the Toolbar -->
+        <item name="windowActionModeOverlay">true</item>
+
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="MyToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">@android:color/white
+        </item>  <!-- Text color of Toolbar Title -->
+        <item name="android:textColorSecondary">@android:color/white
+        </item><!-- Color of Overflow Menu and color of Navigation Drawer Icon -->
+        <item name="actionMenuTextColor">@android:color/white</item>
+
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="MyPopupTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@android:color/white
+        </item><!--Background of Overflow Menu-->
+        <item name="android:textColorPrimary">@android:color/darker_gray
+        </item><!-- Text color of Overflow Menu items-->
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppMaterialTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppMaterialTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="ThemeOverlay.MyTextDetail" parent="AppMaterialTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Dark Buttons -->
+    <style name="ThemeOverlay.MyDarkButton" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorButtonNormal">@color/secondaryColor</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="ThemeOverlay.FirebaseIcon" parent="AppMaterialTheme">
+        <item name="android:layout_marginTop">@dimen/icon_top_margin_zero</item>
+        <item name="android:layout_marginBottom">@dimen/icon_bottom_margin_zero</item>
+    </style>
+
+    <style name="ThemeOverlay.MyTitleText" parent="AppMaterialTheme">
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">28sp</item>
+    </style>
 
 </resources>

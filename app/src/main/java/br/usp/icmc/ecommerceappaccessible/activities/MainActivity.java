@@ -1,4 +1,4 @@
-package br.usp.icmc.ecommerceappaccessible;
+package br.usp.icmc.ecommerceappaccessible.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import br.usp.icmc.ecommerceappaccessible.R;
 
 public class MainActivity extends AppCompatActivity {
 

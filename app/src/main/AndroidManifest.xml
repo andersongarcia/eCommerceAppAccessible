@@ -8,23 +8,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppMaterialTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppMaterialTheme">
+        </activity>
+        <activity android:name=".activities.ProdutoDetalheActivity" />
+        <activity android:name=".activities.DadosPessoaisActivity" android:label="@string/dados_pessoais" />
+        <activity android:name=".activities.FormaEnvioActivity" android:label="@string/forma_envio" />
+        <activity android:name=".activities.PagamentoActivity" android:label="@string/forma_pagamento" />
+        <activity android:name=".activities.ConfirmaActivity" android:label="@string/obrigado_compra" />
+        <activity android:name=".activities.CarrinhoActivity" android:label="@string/carrinho_compras">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProdutoDetalheActivity" />
-        <activity android:name=".DadosPessoaisActivity" />
-        <activity android:name=".FormaEnvioActivity" />
-        <activity android:name=".PagamentoActivity" />
-        <activity android:name=".ConfirmaActivity" />
-        <activity android:name=".CarrinhoActivity"></activity>
     </application>
 
 </manifest>
