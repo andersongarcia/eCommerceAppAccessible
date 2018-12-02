@@ -24,38 +24,34 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="1">
-            <android.support.design.widget.TextInputLayout
+
+            <EditText
+                android:id="@+id/nome"
+                android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5">
-                <EditText
-                    android:id="@+id/nome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_nome" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
+                android:hint="@string/hint_nome"
+                android:layout_weight="0.5"
+                android:nextFocusDown="@id/sobrenome" />
+            <EditText
+                android:id="@+id/sobrenome"
+                android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:id="@+id/sobrenome"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_sobrenome" />
-            </android.support.design.widget.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_sobrenome"
+                android:nextFocusDown="@id/email"
+                android:nextFocusUp="@id/nome" />
 
         </LinearLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
+            android:id="@+id/email"
+            android:theme="@style/AppMaterialTheme.Input"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_email" />
-        </android.support.design.widget.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:nextFocusUp="@id/sobrenome"
+            android:nextFocusDown="@id/endereco"
+            android:hint="@string/hint_email" />
 
 
         <LinearLayout
@@ -63,69 +59,72 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="1">
-            <android.support.design.widget.TextInputLayout
+
+            <EditText
+                android:id="@+id/endereco"
+                android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.21">
-                <EditText
-                    android:id="@+id/endereco"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_endereco" />
-            </android.support.design.widget.TextInputLayout>
+                android:layout_weight="0.21"
+                android:nextFocusUp="@id/email"
+                android:nextFocusDown="@id/numero"
+                android:hint="@string/hint_endereco" />
 
-            <android.support.design.widget.TextInputLayout
+            <EditText
+                android:id="@+id/numero"
+                android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <EditText
-                    android:id="@+id/numero"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_numero" />
-            </android.support.design.widget.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:nextFocusUp="@id/endereco"
+                android:nextFocusDown="@id/bairro"
+                android:hint="@string/hint_numero" />
 
         </LinearLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <EditText
+            android:id="@+id/bairro"
+            android:theme="@style/AppMaterialTheme.Input"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/bairro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_bairro" />
-        </android.support.design.widget.TextInputLayout>
-
+            android:layout_height="wrap_content"
+            android:nextFocusUp="@id/numero"
+            android:nextFocusDown="@id/cidade"
+            android:hint="@string/hint_bairro" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="1">
-            <android.support.design.widget.TextInputLayout
+
+            <EditText
+                android:id="@+id/cidade"
+                android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.21">
-                <EditText
-                    android:id="@+id/cidade"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_cidade" />
-            </android.support.design.widget.TextInputLayout>
+                android:layout_weight="0.21"
+                android:nextFocusUp="@id/bairro"
+                android:nextFocusDown="@id/sUF"
+                android:hint="@string/hint_cidade" />
 
             <Spinner
                 android:id="@+id/sUF"
-                android:layout_weight="0.79"
+                android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_weight="0.79"
+                android:nextFocusUp="@id/cidade"
+                android:nextFocusDown="@id/endereco_faturamento" />
 
         </LinearLayout>
 
         <CheckBox
             android:id="@+id/endereco_faturamento"
+            android:theme="@style/AppMaterialTheme.Input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:nextFocusUp="@id/sUF"
+            android:nextFocusDown="@id/btnProsseguir"
             android:text="@string/hint_endereco_faturamento" />
 
         <TextView
@@ -137,9 +136,10 @@
 
     <Button
         android:id="@+id/btnProsseguir"
+        android:theme="@style/ThemeOverlay.MyDarkButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
         android:text="@string/prosseguir"
+        android:nextFocusUp="@id/endereco_faturamento"
         app:layout_constraintBottom_toBottomOf="parent" />
 </android.support.constraint.ConstraintLayout>

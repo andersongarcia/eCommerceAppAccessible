@@ -12,4 +12,5 @@
     <dimen name="icon_bottom_margin_zero">0dp</dimen>
     <dimen name="title_bottom_margin">16dp</dimen>
     <dimen name="field_width_standard">160dp</dimen>
+    <dimen name="minHeightForOptions">48dp</dimen>
 </resources>

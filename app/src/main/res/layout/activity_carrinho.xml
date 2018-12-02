@@ -20,7 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/primaryLightColor"
             android:padding="@dimen/text_margin">
 
             <ImageView
@@ -97,11 +96,9 @@
                 android:layout_height="wrap_content" android:layout_margin="@dimen/tile_padding">
                 <Button
                     android:id="@+id/btnFinalizarCompra"
+                    android:theme="@style/ThemeOverlay.MyDarkButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/secondaryColor"
-                    android:textColor="@color/secondaryTextColor"
-                    android:padding="@dimen/tile_padding"
                     android:layout_alignParentRight="true"
                     android:text="@string/finalizar_compra"/>
 

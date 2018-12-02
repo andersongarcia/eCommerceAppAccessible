@@ -39,7 +39,7 @@ public class DadosPessoaisActivity extends BaseActivity {
 
     private void fillSpinner() {
         String[] items = new String[]{"ES","MG","RJ","SP"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         sUF.setAdapter(adapter);
     }
 }

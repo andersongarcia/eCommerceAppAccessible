@@ -68,64 +68,49 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="1">
-                    <android.support.design.widget.TextInputLayout
+                    <EditText
+                        android:id="@+id/nome"
+                        android:theme="@style/AppMaterialTheme.Input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
-                        <EditText
-                            android:id="@+id/nome"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/hint_nome" />
-                    </android.support.design.widget.TextInputLayout>
+                        android:layout_weight="0.5"
+                        android:hint="@string/hint_nome" />
 
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:id="@+id/sobrenome"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/hint_sobrenome" />
-                    </android.support.design.widget.TextInputLayout>
-
-                </LinearLayout>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
                     <EditText
-                        android:id="@+id/numeroCartao"
+                        android:id="@+id/sobrenome"
+                        android:theme="@style/AppMaterialTheme.Input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/hint_sobrenome" />
-                </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/numeroCartao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_numerocartao" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="1">
-                    <android.support.design.widget.TextInputLayout
+
+                    <EditText
+                        android:id="@+id/dataValidade"
+                        android:theme="@style/AppMaterialTheme.Input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5">
-                        <EditText
-                            android:id="@+id/dataValidade"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/hint_data_validade" />
-                    </android.support.design.widget.TextInputLayout>
+                        android:layout_weight="0.5"
+                        android:hint="@string/hint_data_validade" />
 
-                    <android.support.design.widget.TextInputLayout
+                    <EditText
+                        android:id="@+id/codigoSeguranca"
+                        android:theme="@style/AppMaterialTheme.Input"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:id="@+id/codigoSeguranca"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/hint_codigo_seguranca" />
-                    </android.support.design.widget.TextInputLayout>
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_codigo_seguranca" />
 
                 </LinearLayout>
 
@@ -155,9 +140,9 @@
 
     <Button
         android:id="@+id/btnProsseguir"
+        android:theme="@style/ThemeOverlay.MyDarkButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
         android:text="@string/prosseguir"
         app:layout_constraintBottom_toBottomOf="parent" />
 
