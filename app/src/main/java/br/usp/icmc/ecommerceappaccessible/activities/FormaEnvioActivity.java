@@ -12,8 +12,8 @@ import butterknife.ButterKnife;
 
 public class FormaEnvioActivity extends BaseActivity {
 
-    @BindView(R.id.btnProsseguir)
-    Button btnProsseguir;
+    @BindView(R.id.btnSelecionarFormaPagamento)
+    Button btnSelecionarFormaPagamento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +22,17 @@ public class FormaEnvioActivity extends BaseActivity {
 
         ButterKnife.bind(this);
 
-        btnProsseguir.setOnClickListener(new View.OnClickListener() {
+        btnSelecionarFormaPagamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), PagamentoActivity.class);
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onValidationSucceeded() {
+
     }
 }

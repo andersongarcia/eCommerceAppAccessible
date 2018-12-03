@@ -11,7 +11,7 @@
     <string name="hint_bairro">Bairro *</string>
     <string name="hint_uf">UF *</string>
     <string name="hint_cidade">Cidade *</string>
-    <string name="hint_endereco_faturamento">Utilizar também este endereço para faturamento</string>
+    <string name="hint_endereco_faturamento">Utilizar este endereço para faturamento</string>
     <string name="alerta_obrigatorios">Atenção: os dados marados com * são obrigatórios!</string>
     <string name="prosseguir">Prosseguir</string>
     <string name="entrega_economica">Entrega Econômica</string>
@@ -20,8 +20,8 @@
     <string name="entrega_sedex_prazo">R$ 41,35 - Entrega em até 4 dias úteis</string>
     <string name="escolha_forma_pagamento">Escolha a forma de pagamento para concluir seu pedido</string>
     <string name="forma_pagamento_boleto">Boleto Bancário</string>
-    <string name="hint_data_validade">Data de validade</string>
-    <string name="hint_codigo_seguranca">Código de Segurança</string>
+    <string name="hint_data_validade">Validade</string>
+    <string name="hint_codigo_seguranca">CVV</string>
     <string name="forma_pagamento_transf">Transferência Bancária</string>
     <string name="alerta_confirma">Seu pedido foi confirmado e logo será liberado para processamento. Aguarde mais informações em seu e-mail.</string>
     <string name="dados_pessoais">Dados pessoais</string>
@@ -31,4 +31,16 @@
     <string name="carrinho_compras">Carrinho de compras</string>
     <string name="forma_pagamento_cartao">Cartão de Crédito</string>
     <string name="hint_numerocartao">Número do Cartão</string>
+    <string name="selecionar_envio">Selecionar forma de envio</string>
+    <string name="selecionar_pagamento">Selecionar Forma de Pagamento</string>
+    <string name="confirmar_pagamento">Confirmar Pagamento</string>
+    <string name="msg_erro_email_invalido">E-mail inválido</string>
+    <string name="msg_erro_preencha_nome">Preencha o nome</string>
+    <string name="msg_erro_preencha_sobrenome">Preencha o sobrenome</string>
+    <string name="msg_erro_preencha_endereco">Preencha o endereço</string>
+    <string name="msg_erro_preencha_bairro">Preencha o bairro</string>
+    <string name="msg_erro_preencha_cidade">Preencha a cidade</string>
+    <string name="msg_erro_codigo_invalido">Código de Verificação inválido</string>
+    <string name="msg_erro_data_invalida">Data inválida</string>
+    <string name="msg_erro_numero_cartao">Número do Cartão inválido</string>
 </resources>

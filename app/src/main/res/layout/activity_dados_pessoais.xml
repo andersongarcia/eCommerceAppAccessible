@@ -51,6 +51,7 @@
             android:layout_height="wrap_content"
             android:nextFocusUp="@id/sobrenome"
             android:nextFocusDown="@id/endereco"
+            android:inputType="textEmailAddress"
             android:hint="@string/hint_email" />
 
 
@@ -123,8 +124,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:textSize="16dp"
             android:nextFocusUp="@id/sUF"
-            android:nextFocusDown="@id/btnProsseguir"
+            android:nextFocusDown="@id/btnSelecionarFormaEnvio"
             android:text="@string/hint_endereco_faturamento" />
 
         <TextView
@@ -135,11 +137,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnProsseguir"
+        android:id="@+id/btnSelecionarFormaEnvio"
         android:theme="@style/ThemeOverlay.MyDarkButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/prosseguir"
+        android:text="@string/selecionar_envio"
         android:nextFocusUp="@id/endereco_faturamento"
         app:layout_constraintBottom_toBottomOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -17,4 +17,9 @@ public class ConfirmaActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirma);
     }
+
+    @Override
+    public void onValidationSucceeded() {
+        // do nothing
+    }
 }

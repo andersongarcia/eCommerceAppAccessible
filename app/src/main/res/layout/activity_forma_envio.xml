@@ -82,11 +82,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnProsseguir"
+        android:id="@+id/btnSelecionarFormaPagamento"
         android:theme="@style/ThemeOverlay.MyDarkButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/prosseguir"
+        android:text="@string/selecionar_pagamento"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

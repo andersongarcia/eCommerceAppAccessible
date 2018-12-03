@@ -41,7 +41,7 @@ public class CarrinhoActivity extends AppCompatActivity {
 
     private void fillSpinner() {
         Integer[] items = new Integer[]{1,2,3,4,5};
-        ArrayAdapter<Integer> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items);
+        ArrayAdapter<Integer> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         sQuantidade.setAdapter(adapter);
     }
 }

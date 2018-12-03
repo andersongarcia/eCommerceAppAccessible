@@ -1,22 +1,25 @@
 package br.usp.icmc.ecommerceappaccessible.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
+import com.mobsandgeeks.saripaar.annotation.CreditCard;
+import com.mobsandgeeks.saripaar.annotation.NotEmpty;
+
 import br.usp.icmc.ecommerceappaccessible.R;
+import br.usp.icmc.ecommerceappaccessible.extensions.MaskWatcher;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class PagamentoActivity extends BaseActivity {
 
-    @BindView(R.id.btnProsseguir)
-    Button btnProsseguir;
+    @BindView(R.id.btnConfirmarPagamento)
+    Button btnConfirmarPagamento;
 
     @BindView(R.id.rbBoletoBancario)
     RadioButton rbBoletoBancario;
@@ -26,6 +29,18 @@ public class PagamentoActivity extends BaseActivity {
 
     @BindView(R.id.rbTransfBancaria)
     RadioButton rbTransfBancaria;
+
+    @CreditCard(messageResId = R.string.msg_erro_numero_cartao)
+    @BindView(R.id.numeroCartao)
+    EditText numeroCartao;
+
+    @NotEmpty(messageResId = R.string.msg_erro_data_invalida)
+    @BindView(R.id.dataValidade)
+    EditText dataValidade;
+
+    @NotEmpty(messageResId = R.string.msg_erro_codigo_invalido)
+    @BindView(R.id.codigoSeguranca)
+    EditText codigoSeguranca;
 
     @BindView(R.id.llDadosCartao)
     LinearLayout llDadosCartao;
@@ -61,16 +76,25 @@ public class PagamentoActivity extends BaseActivity {
 
         ButterKnife.bind(this);
 
-        btnProsseguir.setOnClickListener(new View.OnClickListener() {
+        numeroCartao.addTextChangedListener(new MaskWatcher("#### #### #### ####"));
+        dataValidade.addTextChangedListener(new MaskWatcher("##/##"));
+        codigoSeguranca.addTextChangedListener(new MaskWatcher("###"));
+
+        btnConfirmarPagamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), ConfirmaActivity.class);
-                startActivity(intent);
+                validator.validate();
             }
         });
 
         rbBoletoBancario.setOnClickListener(listener);
         rbCartaoCredito.setOnClickListener(listener);
         rbTransfBancaria.setOnClickListener(listener);
+    }
+
+    @Override
+    public void onValidationSucceeded() {
+        Intent intent = new Intent(getBaseContext(), ConfirmaActivity.class);
+        startActivity(intent);
     }
 }

@@ -89,9 +89,11 @@
                     android:id="@+id/numeroCartao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:digits="0123456789 "
+                    android:maxLength="19"
                     android:hint="@string/hint_numerocartao" />
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -100,19 +102,26 @@
                     <EditText
                         android:id="@+id/dataValidade"
                         android:theme="@style/AppMaterialTheme.Input"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:ems="5"
+                        android:maxLength="5"
+                        android:digits="1234567890/"
+                        android:layout_alignParentLeft="true"
                         android:hint="@string/hint_data_validade" />
 
                     <EditText
                         android:id="@+id/codigoSeguranca"
                         android:theme="@style/AppMaterialTheme.Input"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:ems="3"
+                        android:maxLength="3"
+                        android:digits="1234567890"
+                        android:layout_alignParentRight="true"
                         android:hint="@string/hint_codigo_seguranca" />
 
-                </LinearLayout>
+                </RelativeLayout>
 
 
             </LinearLayout>
@@ -139,11 +148,11 @@
 
 
     <Button
-        android:id="@+id/btnProsseguir"
+        android:id="@+id/btnConfirmarPagamento"
         android:theme="@style/ThemeOverlay.MyDarkButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/prosseguir"
+        android:text="@string/confirmar_pagamento"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
