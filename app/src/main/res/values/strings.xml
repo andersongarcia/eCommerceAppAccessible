@@ -4,7 +4,7 @@
     <string name="finalizar_compra">Finalizar Compra</string>
     <string name="hint_nome">Nome *</string>
     <string name="hint_sobrenome">Sobrenome *</string>
-    <string name="preencha_seus_dados">Preencha seus dados corretamente</string>
+    <string name="preencha_seus_dados">Preencha seus dados corretamente!</string>
     <string name="hint_email">E-mail *</string>
     <string name="hint_endereco">Endereço *</string>
     <string name="hint_numero">Número *</string>
@@ -12,7 +12,7 @@
     <string name="hint_uf">UF *</string>
     <string name="hint_cidade">Cidade *</string>
     <string name="hint_endereco_faturamento">Utilizar este endereço para faturamento</string>
-    <string name="alerta_obrigatorios">Atenção: os dados marados com * são obrigatórios!</string>
+    <string name="alerta_obrigatorios">Atenção: os dados marcados com * são obrigatórios!</string>
     <string name="prosseguir">Prosseguir</string>
     <string name="entrega_economica">Entrega Econômica</string>
     <string name="entrega_economica_prazo">Grátis - Entrega em até 10 dias úteis</string>
@@ -43,4 +43,10 @@
     <string name="msg_erro_codigo_invalido">Código de Verificação inválido</string>
     <string name="msg_erro_data_invalida">Data inválida</string>
     <string name="msg_erro_numero_cartao">Número do Cartão inválido</string>
+    <string name="item_carrinho_compra">Item do carrinho de compra</string>
+    <string name="foto_item_compra">Foto do item de compra</string>
+    <string name="dados_entrega">Dados para a entrega</string>
+    <string name="dados_cartao">Dados do Cartão de Crédito</string>
+    <string name="hint_nome_cartao">Nome (como consta no cartão)</string>
+    <string name="compra_finalizada">Compra finalizada com sucesso</string>
 </resources>

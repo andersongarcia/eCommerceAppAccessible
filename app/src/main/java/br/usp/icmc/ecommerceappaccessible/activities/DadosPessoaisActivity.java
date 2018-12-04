@@ -6,21 +6,20 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.mobsandgeeks.saripaar.ValidationError;
-import com.mobsandgeeks.saripaar.Validator;
 import com.mobsandgeeks.saripaar.annotation.Email;
 import com.mobsandgeeks.saripaar.annotation.NotEmpty;
-
-import java.util.List;
 
 import br.usp.icmc.ecommerceappaccessible.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class DadosPessoaisActivity extends BaseActivity {
+
+    @BindView(R.id.llPreenchaDados)
+    LinearLayout llPreenchaDados;
 
     @BindView(R.id.btnSelecionarFormaEnvio)
     Button btnSelecionarFormaEnvio;
@@ -62,11 +61,17 @@ public class DadosPessoaisActivity extends BaseActivity {
         btnSelecionarFormaEnvio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validator.validate();
+                //validator.validate();
+                onValidationSucceeded();
             }
         });
 
         fillSpinner();
+
+        llPreenchaDados.setFocusable(true);
+        llPreenchaDados.setFocusableInTouchMode(true);
+        llPreenchaDados.requestFocus();
+
     }
 
     private void fillSpinner() {

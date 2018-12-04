@@ -13,46 +13,78 @@
         android:paddingLeft="@dimen/text_margin"
         android:paddingRight="@dimen/text_margin">
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/llPreenchaDados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="@string/preencha_seus_dados" />
+            android:orientation="vertical"
+            android:importantForAccessibility="yes"
+            android:focusable="true">
+            <requestFocus />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/preencha_seus_dados"
+                android:nextFocusDown="@id/nome" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alerta_obrigatorios" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:contentDescription="@string/dados_pessoais">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/nome"
+                    android:theme="@style/AppMaterialTheme.Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_nome"
+                    android:layout_weight="0.5"
+                    android:nextFocusUp="@id/llPreenchaDados"
+                    android:nextFocusDown="@id/sobrenome" />
+                <EditText
+                    android:id="@+id/sobrenome"
+                    android:theme="@style/AppMaterialTheme.Input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_sobrenome"
+                    android:nextFocusDown="@id/email"
+                    android:nextFocusUp="@id/nome" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/email"
+                android:theme="@style/AppMaterialTheme.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nextFocusUp="@id/sobrenome"
+                android:nextFocusDown="@id/endereco"
+                android:inputType="textEmailAddress"
+                android:hint="@string/hint_email" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <EditText
-                android:id="@+id/nome"
-                android:theme="@style/AppMaterialTheme.Input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_nome"
-                android:layout_weight="0.5"
-                android:nextFocusDown="@id/sobrenome" />
-            <EditText
-                android:id="@+id/sobrenome"
-                android:theme="@style/AppMaterialTheme.Input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_sobrenome"
-                android:nextFocusDown="@id/email"
-                android:nextFocusUp="@id/nome" />
-
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/email"
-            android:theme="@style/AppMaterialTheme.Input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:nextFocusUp="@id/sobrenome"
-            android:nextFocusDown="@id/endereco"
-            android:inputType="textEmailAddress"
-            android:hint="@string/hint_email" />
+            android:orientation="vertical"
+            android:contentDescription="@string/dados_entrega">
 
 
         <LinearLayout
@@ -102,7 +134,7 @@
                 android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.21"
+                android:layout_weight="0.25"
                 android:nextFocusUp="@id/bairro"
                 android:nextFocusDown="@id/sUF"
                 android:hint="@string/hint_cidade" />
@@ -112,7 +144,7 @@
                 android:theme="@style/AppMaterialTheme.Input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.79"
+                android:layout_weight="0.75"
                 android:nextFocusUp="@id/cidade"
                 android:nextFocusDown="@id/endereco_faturamento" />
 
@@ -129,10 +161,8 @@
             android:nextFocusDown="@id/btnSelecionarFormaEnvio"
             android:text="@string/hint_endereco_faturamento" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/alerta_obrigatorios"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 
